@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>NOTMONSTERS</title>
+		<meta name="Description" content="Not Monsters" />
+		<link rel="shortcut icon" href="images/nm.png">
+		<link name="text/css" rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta name="Keywords" content="Not Mosters, Not, Monsters, Band, gig, gigs, show, shows, dublin, Noel, Dupla, Des, Desmond, Hickey, Dave, David, Newell, Jakub, Was"/>
+
+		<script>
+			var scroll = $('div').outerHeight();
+
+			$('div a').click(function( e ){
+			  e.preventDefault();
+			  var myHref = $(this).attr('href');
+			  var newPos = $(myHref).offset().top-60;
+			  $('html, body').stop().animate({scrollTop: newPos-scroll}, 160);
+			});
+
+			function shazam(){
+			    var x = document.getElementById('dropdown');
+			    if (x.style.display === 'block') {
+			        x.style.display = 'none';
+			    } else {
+			        x.style.display = 'block';
+			    }
+			}
+		</script>	
+	</head>
+	<body>
+		<div class="masthead">
+			<div class="mh1">
+				<a href="#landing"><img src="images/icons/controls/homel.png" alt="home button" class="homemh"></a>
+			</div>
+			<div class="mh2">
+				<a href="#landing"><img src="images/nmlogo.png" alt="logo" class="logomh"></a>
+			</div>
+			<div class="mh3">
+				<img src="images/icons/controls/menu.png" alt="menu" onclick="shazam()" class="menumh">
+			</div>
+		</div><!-- masthead-->
+		<div id="dropdown">
+			<ul>
+				<li class="first"><a href="#music" style="padding-left: 0px;" onclick="shazam()" class="fontl">MUSIC</a></li>
+				<li><a href="#videos" style="padding-left: 0px;" onclick="shazam()" class="fontl">VIDEOS</a></li>
+				<li><a href="#bio" style="padding-left: 0px;" onclick="shazam()" class="fontl">BIO</a></li>
+				<li><a href="#contact" style="padding-left: 0px;" onclick="shazam()" class="fontl">CONTACT</a></li>
+			</ul>
+		</div><!-- dropdown-->	
+				
+		<div class="container">
+			<div class="content">
+				<div href="#" id="landing">
+					<h1 class="lpfont">WELCOME TO OUR PAGE</h1>
+				</div>
+
+				<div href="#" id="music">
+					<h1 class="font">MUSIC</h1>
+					<iframe class="mplayer"  scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151524003&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>	
+					<div class="findus">
+						<h3 class="fontd">YOU CAN ALSO FIND US HERE</h3>
+					</div><!-- findus-->
+					<a href="http://itunes.apple.com/album/id1250768671?ls=1&app=itunes"><img src="./images/icons/music/itunes.png" alt="" class="musiclink"></a>
+					<a href="http://itunes.apple.com/album/id1250768671"><img src="./images/icons/music/amusic.png" alt="" class="musiclink"></a>
+					<a href="https://open.spotify.com/artist/1291xVXHkklmZIge2DyaUJ"><img src="./images/icons/music/spotify.png" alt="" class="musiclink"></a>
+					<a href="https://play.google.com/store/music/artist/Not_Monsters?id=Arculv5lx6qwlunxls227hsyvtq"><img src="./images/icons/music/play.png" alt="" class="musiclink"></a>	  
+				</div><!-- Music-->
+
+				<div id="videos">
+					<h1 class="font">VIDEOS</h1>
+					<div class="vidcont">
+						<div class="slider">
+							<iframe class="slide" src="https://www.youtube.com/embed/CGcUZ7FZ0_Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<iframe class="slide" src="https://www.youtube.com/embed/okotPmFUz9g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<iframe class="slide" src="https://www.youtube.com/embed/jlpgt9ZSYYA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div><!-- slider-->		
+					</div><!-- vidcont-->	
+				</div><!-- Videos-->
+
+				<div id="bio">
+					<h1 class="font">BIO</h1>
+					<div class="biotext">
+						<h4>Not Monsters is what happens when you smash the melodic experimentalism of CFIT together with the powerhouse riffing of Punch Face Champions.</h4>
+						<h4>Despite only joining forces a year ago, this supergroup have already played a number of shows around Ireland, beginning with Vantastival, and including Canalphonic, State’s Faces 2016, Hard Working Class Heroes, Electric Picnic and Knockanstockan.</h4><br>
+						<qoute style="text-align: center;">“a formidable meeting of sheer power, melody and smart songwriting,” - State Magazine</qoute>
+						<h4>Not Monsters are currently preparing to release their debut EP,<br><br>"Whowever dies with the most stuff wins"</h4>
+					</div><!-- biotext-->		
+				</div><!-- Bio-->
+
+				<div id="contact">
+					<h1 class="fontl">CONTACT US</h1>
+					<div class="form">	
+						<form action="http://werenotmonsters.com/cgi-bin/monstermail" enctype="multipart/form-data" method="post">
+							<label for="subject">SUBJECT</label>
+							<select name="subject">
+								<option value="info">Information</option>
+								<option value="bookings">Bookings</option>
+								<option value="Nudes">Nudes ;p</option>
+							</select><br>
+							<input name="mailfrom" type="text" required="yes" placeholder="Your Email Address" /><br>
+							<textarea name="message" id="message" cols="20" rows="12" placeholder="Your hopes and dreams"></textarea><br>
+							<input type="submit" name="submit" id="submit" value="Send" style="width: 70px;" />
+							<input type="hidden" name="redirect" value="http://www.werenotmonsters.com/sent.html">
+						</form>	
+					</div><!-- form-->	
+				</div><!-- Contact-->
+				<div class="footer">
+					<a href="https://www.facebook.com/werenotmonsters/" target="_blank">
+						<img src="./images/icons/social/fb.png" class="social" style="padding-bottom: 1px" alt="">
+					</a>
+					<a href="https://twitter.com/notmonsters" target="_blank">
+						<img src="./images/icons/social/tw.png" class="social" style="padding-bottom: 4px;" alt="">
+					</a>
+					<a href="https://www.instagram.com/notmonsters/" target="_blank">
+						<img src="./images/icons/social/ig.png" class="social" alt="">
+					</a>
+					<a href="https://www.youtube.com/channel/UCQQlf2lqkYoHtkoE97n61CQ" target="_blank">
+						<img src="./images/icons/social/yt.png" class="social" style="padding-bottom: 6px;" alt="">
+					</a>
+				</div><!-- footer-->	
+			</div><!-- content-->	
+		</div><!-- container-->	
+	</body>
+</html>
